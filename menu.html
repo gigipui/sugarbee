@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sugarbee</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Florence Sii">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="finalstyle.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="profile">
+            <img src="images/sugarbee.jpg" alt="sugarbee logo">
+            <p><strong>Sugarbee</strong></p>
+        </div>
+    </header>
+
+    <nav class="main">
+        <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="menu.html">MENU</a></li>
+        <li><a href="orders.html">ORDER</a></li>     
+        </ul>
+        <!--side bar-->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <p>Learn more</p>
+            <a href="about.html" target="_blank"> About Us</a>
+            <p>Contacts</p>
+            <a href="tel:+0199557449">019-9557 449</a>
+            <a href="mailto:balqisnaj006@gmail.com">sugarbee@gmail.com</a>
+            <p>Feedback</p>
+            <a href="feedback.html" target="_blank">Feedback Form</a>
+        </div>
+        <span id="sidebar-icon" onclick="openNav()">&#9776;</span>
+    </nav>
+
+    <nav class="sub">
+        <ul>
+            <li><a href="#maincourse">Main Course &#160;&#183;&#160</a></li>
+            <li><a href="#beverage">Beverage &#160;&#183;&#160</a></li>
+            <li><a href="#dessert">Dessert &#160;&#183;&#160</a></li>
+            <li><a href="description.html">Food description</a></li>
+        </ul>
+    </nav>
+
+    <article>
+    <!-- Main Course Section -->
+    <section id="maincourse" class="course-section">
+    <h2 class="title">Main Course</h2>
+    <div class="food-grid">
+        <div class="food-card">
+            <img src="images/burger.jpg" alt="burger">
+            <p><strong>Burger</strong></p>
+            <div class="menu">
+                <span class="stars">★★★★★</span>
+            </div>
+            <div>
+                <span class="food-price">RM11.50</span>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <img src="images/pizza.jpeg" alt="Pizza">
+            <p><strong>Pizza</strong></p>
+            <div class="menu">
+                <span class="stars">★★★★</span>
+            </div>
+            <div>
+                <span class="food-price">RM18.00</span>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <img src="images/nasilemak.jpg" alt="Nasi Lemak">
+            <p><strong>Nasi Lemak</strong></p>
+            <div class="menu">
+                <span class="stars">★★★★★</span>
+            </div>
+            <div>
+                <span class="food-price">RM8.00</span>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Beverage Section -->
+    <section id="beverage" class="beverage-section">
+        <h2 class="title">Beverage</h2>
+        <div class="food-grid">
+            <div class="food-card">
+                <img src="images/honey-vanilla-milkshake.jpeg" alt="Honey Vanilla Milkshake">
+                <p><strong>Honey Vanilla Milkshake</strong></p>
+                <div class="menu">
+                    <span class="stars">★★★★★</span>
+                </div>
+                <div>
+                    <span class="food-price">RM9.50</span>
+                </div>
+            </div>
+    
+            <div class="food-card">
+                <img src="images/cola.jpg" alt="Cola">
+                <p><strong>Cola</strong></p>
+                <div class="menu">
+                    <span class="stars">★★★★</span>
+                </div>
+                <div>
+                    <span class="food-price">RM3.00</span>
+                </div>
+            </div>
+    
+    
+            <div class="food-card">
+                <img src="images/coffee.jpg" alt="Coffee">
+                <p><strong>Coffee</strong></p>
+                <div class="menu">
+                    <span class="stars">★★★</span>
+                </div>
+                <div>
+                    <span class="food-price">RM3.50</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- dessert Section -->
+    <section id="dessert" class="dessert-section">
+        <h2 class="title">Dessert</h2>
+        <div class="food-grid">
+            <div class="food-card">
+                <img src="images/icecream.jpg" alt="Ice-cream">
+                <p><strong>Ice-cream</strong></p>
+                <div class="menu">
+                    <span class="stars">★★★</span>
+                </div>
+                <div>
+                    <span class="food-price">RM1.50</span>
+                </div>
+            </div>
+    
+            <div class="food-card">
+                <img src="images/cake.jpeg" alt="Cake">
+                <p><strong>Cake</strong></p>
+                <div class="menu">
+                    <span class="stars">★★★★</span>
+                </div>
+                <div>
+                    <span class="food-price">RM56.00</span>
+                </div>
+            </div>
+    
+    
+            <div class="food-card">
+                <img src="images/honeydrizzledonuts.jpeg" alt="Honey Drizzle Donuts">
+                <p><strong>Honey Drizzle Donuts</strong></p>
+                <div class="menu">
+                    <span class="stars">★★★★★</span>
+                </div>
+                <div>
+                    <span class="food-price">RM2.50</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    </article>
+
+    <footer>
+        <p>&copy; Group 12 | Last updated: 19/11/2024</p>
+        <a href="#top">Go Back To Sugarbee</a>
+    </footer>
+</body>
+</html>

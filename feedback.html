@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Feedback</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Gigi Pui">
+	<meta name="description" content="SugarBee's Feedback Form">
+	<meta name="keywords" content="Sugarbee, Feedback">
+    <link rel="stylesheet" href="finalstyle.css" type="text/css">
+    <script src="script.js"></script>   
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="profile">
+        <img src="images/sugarbee.jpg" alt="Sugarbee">
+        <p><strong>Sugarbee</strong></p>
+    </div>
+</header>
+
+<nav class="main">
+    <ul>
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="menu.html">MENU</a></li>
+    <li><a href="orders.html">ORDER</a></li>     
+    </ul>
+    <!--side bar-->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <p>Learn more</p>
+        <a href="about.html" target="_blank"> About Us</a>
+        <p>Contacts</p>
+        <a href="tel:+0199557449">019-9557 449</a>
+        <a href="mailto:balqisnaj006@gmail.com">sugarbee@gmail.com</a>
+        <p>Feedback</p>
+        <a href="feedback.html" target="_blank">Feedback Form</a>
+    </div>
+    <span id="sidebar-icon" onclick="openNav()">&#9776;</span>
+</nav>
+
+<article>
+    <h1 id="target" class="center" >Feedback Form</h1>
+    <p class="center" >Please leave your valuable comments to help us improve our service.</p>
+    <div id="rating">
+    <table>
+    <tr>
+        <th colspan="4" rowspan="3" >Rating</th>
+    </tr>    
+    <tr>
+        <th colspan="4">Outstanding</th>
+        <th colspan="4">Exceeds Expectations</th>
+        <th colspan="4">Meets Expectations</th>
+        <th colspan="4">Needs Improvement</th>
+        <th colspan="4">Unacceptable</th>
+    </tr>
+    <tr>
+        <!-- <td></td> -->
+        <td colspan="4">1</td>
+        <td colspan="4">2</td>
+        <td colspan="4">3</td>
+        <td colspan="4">4</td>
+        <td colspan="4">5</td>
+    </tr>
+    </table>
+    </div>
+        <form name="feedback" action="mailto:104398424@students.swinburne.edu.my" method="post" enctype="text/plain">
+            <fieldset>
+                <legend>Customer Information</legend>
+                <table class="ftable">
+                    <tr>
+                        <td>1.</td>
+                        <td ><label for="name">Name</label></td>
+                        <td><input type="text" name="name" placeholder="Include your first and last name" size="40" id="name"></td>
+                        <td id="msg1"></td>
+                    </tr>                        
+                    <tr>
+                        <td>2.</td>
+                        <td><label for="email">Email*</label></td>
+                        <td><input type="email" name="email" size="40" id="email"></td>
+                        <td id="msg2"></td>
+                    </tr>   
+                    <tr>
+                        <td>3.</td>
+                        <td><label for="date">Date*</label></td>
+                        <td><input type="date" name="date" id="date"></td>
+                        <td id="msg3"></td>
+                    </tr>
+            </table>
+        </fieldset>
+        <fieldset >
+            <legend>Feedback Type</legend>
+            <table id="feedbacktype" class="ftable">
+                <tr>
+                    <td>
+                        <input type="checkbox" name="feedback" value="Website" checked="checked" id="website"><label for="website">Website</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="feedback" value="Food" id="food"><label for="food">Food</label>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Food Feedback</legend>
+            <table class="ftable">
+            <tr>
+                <td rowspan="2">1. How would you rate the taste of the food?</td>
+            </tr>    
+            <tr>
+                <td><div class="slidecontainer"><input type="range" name="taste of the food" min="1" max="5" value="3" class="slider" id="Q1_1"></div></td>
+            </tr>
+            <tr>
+                <td rowspan="2">2. How would you rate the friendliness and helpfulness of the staff?</td>
+            </tr>    
+            <tr>
+                <td><div class="slidecontainer"><input type="range" name="staff" min="1" max="5" value="3" class="slider" id="Q1_2"></div></td>
+            </tr>
+            <tr>
+                <td rowspan="2">3. How would you rate the cleanliness of the dining area?</td>
+            </tr>    
+            <tr>
+                <td><div class="slidecontainer"><input type="range" name="cleanliness" min="1" max="5" value="3" class="slider" id="Q1_3" ></div></td>
+            </tr>
+            <tr>
+                <td>4. Would you recommend us to others?</td>
+                <td>
+                    <input type="radio" name="recommend" value="yes" checked="checked" id="yes"><label for="yes">Yes</label>
+                    <input type="radio" name="recommend" value="no" id="no"><label for="no">No</label>
+                </td>
+            </tr>
+            <tr>
+                <td>5. What improvements, if any, what would you suggest for our food?</td>
+                <td><textarea name="suggestion for food" rows="3" cols="40" class="answer" id="Q1_5"></textarea></td>
+            </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Website Feedback</legend>
+            <table class="ftable">
+                <tr>
+                    <td rowspan="2">1. Did the site's content satisfy your needs, wants, and expectations? </td>
+                </tr>    
+                <tr>
+                    <td><div class="slidecontainer"><input type="range" name="webisite: needs, wants and expectations" min="1" max="5" value="3" class="slider" id="Q2_1" ></div></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">2. Was the site's content interesting and valuable?</td>
+                </tr>    
+                <tr>
+                    <td><div class="slidecontainer"><input type="range" name="website: interesting and valueable" min="1" max="5" value="3" class="slider" id="Q2_2" ></div></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">3. Was it easy or difficult to navigate the site?</td>
+                </tr>    
+                <tr>
+                    <td><div class="slidecontainer"><input type="range" name="website: navigate" min="1" max="5" value="3" class="slider" id="Q2_3" ></div></td>
+                </tr>
+                <tr>
+                    <td>4. What area of the site did you like the best and the least? Why?</td>
+                    <td>
+                        <textarea name="website: like the best and the least" rows="3" cols="40" class="answer" id="Q2_4"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5. What improvements, if any, what would you suggest for the site?</td>
+                    <td>
+                        <textarea name="website: suggestion for site" rows="3" cols="40" class="answer" id="Q2_5"></textarea>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <p class="buttons">
+            <input class="button_design" type="submit" id="submit" value="Submit" onclick="validate(event)" >
+            <input class="button_design" type="reset" value="Cancel" onclick="resetForm()">
+        </p>
+        </form>
+</article>
+<footer>&copy; Group 12 | Last updated: 19/11/2024</footer>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sugarbee</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Gigi Pui">
+    <meta name="description" content="SugarBee Order">
+    <link rel="stylesheet" href="finalstyle.css" type="text/css">
+    <script src="script.js"></script>   
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+</head>
+<body>
+    <header>
+        <div class="profile">
+            <img src="images/sugarbee.jpg" alt="sugarbee logo">
+            <p><strong>Sugarbee</strong></p>
+        </div>
+    </header> 
+    <nav class="main">
+        <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="menu.html">MENU</a></li>
+        <li><a href="orders.html">ORDER</a></li>     
+        </ul>
+        <!--side bar-->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <p>Learn more</p>
+            <a href="about.html" target="_blank"> About Us</a>
+            <p>Contacts</p>
+            <a href="tel:+0199557449">019-9557 449</a>
+            <a href="mailto:balqisnaj006@gmail.com">sugarbee@gmail.com</a>
+            <p>Feedback</p>
+            <a href="feedback.html" target="_blank">Feedback Form</a>
+        </div>
+        <span id="sidebar-icon" onclick="openNav()">&#9776;</span>
+    </nav>
+
+    <article>
+        <h1 class="center" id="target">Make your order</h1>
+        <p class="center">Start making your order here!</p>
+        <form name="order" id="order" action="mailto:104398424@students.swinburne.edu.my" method="post" enctype="text/plain" >
+            <fieldset>
+                <legend><strong>Customer Information</strong></legend>
+                <table class="ftable">
+                    <tr> 
+                        <td>1.</td>
+                        <td><label for="name">Name*</label></td>
+                        <td><input type="text" placeholder="Include first and last name" name="name" size="40" id="name"></td>
+                        <td id="msg1"></td>     
+                        </tr>
+                        <tr>
+                        <td>2.</td>
+                        <td><label for="tel">Tel*(+60)</label></td>
+                        <td><input type="tel" placeholder="e.g. 01123456789" name="tel" size="12" id="tel"></td>
+                        <td id="msg2"></td>
+                        </tr>
+                        <tr>   
+                        <td>3.</td>
+                        <td><label for="address">Delivery Address*</label></td>
+                        <td ><textarea name="address" rows="3" cols="40" id="address"></textarea> </td>
+                        <td id="msg3"></td>
+                        </tr>   
+                        <tr>
+                            <td>4.</td>
+                            <td class="test">Area* (Select your postcode)</td>
+                            <td>
+                            <select name="area" size="10" id="area">
+                                <optgroup label="Postcode">
+                                    <option value="93000">93000</option>
+                                    <option value="93010">93010</option>
+                                    <option value="93050">93050</option>
+                                    <option value="93100">93100</option>
+                                    <option value="93200">93200</option>
+                                    <option value="93250">93250</option>
+                                    <option value="93300">93300</option>
+                                    <option value="93350">93350</option>
+                                    <option value="93400">93400</option>
+                                    <option value="93450">93450</option>
+                                    <option value="93480">93480</option>
+                                    <option value="93586">93586</option>
+                                    <option value="93746">93746</option>
+                                    <option value="94300">94300</option>
+                                </optgroup>
+                            </select>
+                            </td>
+                            <td id="msg4"></td>
+                        </tr>
+                        <tr>
+                            <td>5.</td>
+                            <td>Delivery Date*</td>
+                            <td><input type="date" name="date" id="date"></td>
+                            <td id="msg5"></td>
+                            <td>Delivery Time*</td>
+                            <td><input type="time" name="time" id="time"></td>
+                            <td id="msg6"></td>
+                        </tr>            
+                </table>
+            </fieldset>
+            <div id="cart">
+            <fieldset>
+                <legend> Main Course</legend>
+                <div class="product">
+                <table class="ftable">
+                    <tr>
+                        <th></th>
+                        <th> Product: </th>
+                        <th> Quantity: </th>
+                    </tr>
+
+                    <tr>
+                    <td> 1.</td>
+                    <td>
+                        <select name ="Main Course" class="productSelect" id="productSelect1"> <!-- MC: Main Course-->
+                            <option value="0">-- Select Food --</option>
+                            <option value="Burger" data-price="11.50">Burger - RM 11.50</option>
+                            <option value="Pizza" data-price="18.00">Pizza - RM 18.00</option>
+                            <option value="Nasi Lemak" data-price="8.00">Nasi Lemak - RM 8.00</option>
+                            </select>
+                </td>
+            <td>
+                        <input type="number" class="quantity" id="quantityM1" value="1" min="1">
+                    </td>
+                    </tr>
+
+                    <tr>
+                        <td> 2.</td>
+                        <td>
+                            <select name ="Main Course" class="productSelect" id="productSelect2"> <!-- MC: Main Course-->
+                                <option value="0">-- Select Food --</option>
+                                <option value="Burger" data-price="11.50">Burger - RM 11.50</option>
+                                <option value="Pizza" data-price="18.00">Pizza - RM 18.00</option>
+                                <option value="Nasi Lemak" data-price="8.00">Nasi Lemak - RM 8.00</option>
+                                </select>
+                    </td>
+                    <td>
+                            <input type="number" class="quantity" id="quantityM2" value="1" min="1">
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td> 3.</td>
+                        <td>
+                                <select name ="Main Course" class="productSelect" id="productSelect3"> <!-- MC: Main Course-->
+                                    <option value="0">-- Select Food --</option>
+                                    <option value="Burger" data-price="11.50">Burger - RM 11.50</option>
+                                    <option value="Pizza" data-price="18.00">Pizza - RM 18.00</option>
+                                    <option value="Nasi Lemak" data-price="8.00">Nasi Lemak - RM 8.00</option>
+                                    </select>
+                        </td>
+                        <td>
+                            <input type="number" class="quantity" id="quantityM3" value="1" min="1">
+                        </td>
+                    </tr>
+                    
+                </table>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend> Beverage </legend>
+                <div class="product">
+                <table class="ftable">
+                    <tr>
+                        <th></th>
+                        <th>Product:</th>
+                        <th>Cold / Hot:</th>
+                        <th>Quantity:</th>
+                    </tr>
+
+                    <tr>
+                        <td> 1.</td>
+                        <td> 
+                            <select name ="Beverage" class="productSelect" id="productSelect4">
+                                <option value="0">-- Select Beverage --</option>
+                                <option value="Honey Vanilla Milkshake" data-price="9.50">Honey Vanilla Milkshake - RM 9.50</option>
+                                <option value="Cola" data-price="3.00">Cola - RM 3.00</option>
+                                <option value="Coffee" data-price="3.50">Coffee - RM 3.50</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name ="C/H" class="ColdHotSelect" id="ColdHotSelect1">
+                                <option value ="0" >-- Choose --</option>
+                                <option value ="cold"> Cold </option>
+                                <option value ="normal" > Normal </option>
+                                <option value ="hot"> Hot </option>
+                            </select>
+                        </td>
+                        <td>
+                            <input name="quantity" type="number" class="quantity" id="quantityB1" value="1" min="1">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td> 2.</td>
+                        <td> 
+                            <select name ="Beverage" class="productSelect" id="productSelect5">
+                                <option value="0">-- Select Beverage --</option>
+                                <option value="Honey Vanilla Milkshake" data-price="9.50">Honey Vanilla Milkshake - RM 9.50</option>
+                                <option value="Cola" data-price="3.00">Cola - RM 3.00</option>
+                                <option value="Coffee" data-price="3.50">Coffee - RM 3.50</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name ="C/H" class="ColdHotSelect" id="ColdHotSelect2">
+                                <option value ="0" >-- Choose --</option>
+                                <option value ="cold"> Cold </option>
+                                <option value ="normal" > Normal </option>
+                                <option value ="hot"> Hot </option>
+                            </select>
+                        </td>
+                        <td>
+                            <input name="quantity" type="number" class="quantity" id="quantityB2" value="1" min="1">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td> 3.</td>
+                        <td> 
+                                <select name ="Beverage" class="productSelect" id="productSelect6">
+                                    <option value="0">-- Select Beverage --</option>
+                                    <option value="Honey Vanilla Milkshake" data-price="9.50">Honey Vanilla Milkshake - RM 9.50</option>
+                                    <option value="Cola" data-price="3.00">Cola - RM 3.00</option>
+                                    <option value="Coffee" data-price="3.50">Coffee - RM 3.50</option>
+                                </select>
+                        </td>
+                        <td>
+                            <select name ="C/H" class="ColdHotSelect" id="ColdHotSelect3">
+                                <option value ="0" >-- Choose --</option>
+                                <option value ="cold"> Cold </option>
+                                <option value ="normal" > Normal </option>
+                                <option value ="hot"> Hot </option>
+                            </select>
+                        </td>
+                        <td>
+                            <input name="quantity" type="number" class="quantity" id="quantityB3" value="1" min="1">
+                        </td>
+                    </tr>
+                </table>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend> Dessert </legend>
+                <div class="product">
+                <table class="ftable">
+                    <tr>
+                        <th></th>
+                        <th>Product:</th>
+                        <th>Quantity:</th>
+                    </tr>
+                    <tr>
+                        <td> 1. </td>
+                        <td> 
+                                <select name ="Dessert" class="productSelect" id="productSelect7"> <!-- DST:Dessert-->
+                                    <option value="0">-- Select Dessert --</option>
+                                    <option value="Ice-cream" data-price="1.50">Ice-cream - RM 1.50</option>
+                                    <option value="Cake" data-price="56.00">Cake - RM 56.00</option>
+                                    <option value="Honey Drizzle Donuts" data-price="2.50">Honey Drizzle Donuts - RM 2.50</option>
+                                </select>
+                        </td>
+                        <td>
+                            <input name="quantity" type="number" class="quantity" id="quantityD1" value="1" min="1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> 2. </td>
+                        <td> 
+                                <select name ="Dessert" class="productSelect" id="productSelect8"> <!-- DST:Dessert-->
+                                    <option value="0">-- Select Dessert --</option>
+                                    <option value="Ice-cream" data-price="1.50">Ice-cream - RM 1.50</option>
+                                    <option value="Cake" data-price="56.00">Cake - RM 56.00</option>
+                                    <option value="Honey Drizzle Donuts" data-price="2.50">Honey Drizzle Donuts - RM 2.50</option>
+                                </select>
+                        </td>
+                        <td>
+                            <input name="quantity" type="number" class="quantity" id="quantityD2" value="1" min="1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> 3. </td>
+                        <td> 
+                                <select name ="Dessert" class="productSelect" id="productSelect9"> <!-- DST:Dessert-->
+                                    <option value="0">-- Select Dessert --</option>
+                                    <option value="Ice-cream" data-price="1.50">Ice-cream - RM 1.50</option>
+                                    <option value="Cake" data-price="56.00">Cake - RM 56.00</option>
+                                    <option value="Honey Drizzle Donuts" data-price="2.50">Honey Drizzle Donuts - RM 2.50</option>
+                                </select>
+                        </td>
+                        <td>
+                            <input name="quantity" type="number" class="quantity" id="quantityD3" value="1" min="1">
+                        </td>
+                    </tr>
+                </table>
+                </div>
+            </fieldset>
+            </div>
+            <p id="msg7"></p>
+            <h3 class="center">Total: RM<span id="subtotal">0.00</span></h3>
+            <input type="hidden" id="totalPrice" name="totalPrice" value="">
+            <p class="buttons">
+                <input class="button_design"  type="submit" id="submit" value="Submit" onclick="validate2(event)"> <!-- go through input validation before submit to the server-->
+                <input class="button_design" type="reset" value="Cancel" onclick="resetForm()"> <!--delete previous form value and error message-->
+            </p> 
+        </form>
+    </article>
+        <footer>&copy; Group 12 | Last updated: 19/11/2024</footer>
+</body>    
+</html>

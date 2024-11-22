@@ -1,0 +1,574 @@
+/* ----Content----
+    1 Header
+    > 1.1 Sidebar
+    > 1.2 Navigation
+    >> 1.2.1 Main Nav
+    >> 1.2.2 Sub Nav
+    2 Body
+    3 Footer
+    4 Homepage
+    5 Menu
+    6 Description
+    7 About Us
+    8 Orderlist & Feedback
+    9 Media
+-----------------*/  
+
+/*------------------------------------------------ 1 Header ------------------------------------------------*/
+
+header {
+    background-color: #e54242;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    
+}
+
+/*--- Logo ---*/
+.profile img {
+    max-width: 80px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile p{
+    font-size: 36px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+/*------------------------------------------------ 1.1 Sidebar ------------------------------------------------*/
+
+/*This info is taken from:https://www.w3schools.com/howto/howto_js_sidenav.asp */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  
+  .sidenav p {
+    padding: 8px 32px; /* Align with links */
+    color: #818181;    /* Same color as links */
+    font-size: 20px;   /* Smaller font for distinction */
+    margin: 0;         /* Remove default margins */
+    transition: none;  /* Disable animation */
+    text-decoration: underline;
+  }
+  
+  .sidenav p:hover {
+    color: #818181; /* No hover effect */
+  }
+
+  #sidebar-icon{
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+/*------------------------------------------------ 1.2 Navigation (general) ------------------------------------------------*/
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav a:active {
+    color: red;
+}
+
+/*------------------------------------------------ 1.2.1 Main Navigation ------------------------------------------------*/
+
+.main {
+    background-color: #ff8787;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/*------------------------------------------------ 1.2.2 Sub Navigation (5 & 6) ------------------------------------------------*/
+
+.sub ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.sub a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sub a:link{
+    color: #ff8787;
+    text-decoration: none;
+}
+
+.sub a:visited{
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.sub a:hover{
+    text-decoration: underline;
+}
+
+.sub a:active{
+    color: red;
+}
+
+/*------------------------------------------------ 2 Body ------------------------------------------------*/
+
+body {
+    background-color: #facfcf;
+    font-family: "Microsoft YaHei", sans-serif;
+    color: #333;
+    margin: 0;
+}
+
+/*------------------------------------------------ 3 Footer ------------------------------------------------*/
+
+footer {
+    background-color: #e54242;
+    padding: 1rem;
+    color: white;
+    clear: both;
+}
+
+footer a{
+    color:rgb(237, 191, 73);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+footer a:active{
+    color: #2c3e50;
+}
+
+/*------------------------------------------------ 4 Homepage ------------------------------------------------*/
+
+#welcome {
+    font-family: 'childa';
+    font-size: 180%;
+    text-align: center;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    color:rgb(237, 191, 73);
+}
+
+.preview{
+    text-align: center;
+}
+
+figcaption {
+    color: rgb(255, 196, 0);
+    font-weight: bold;
+}
+
+#welcome2 , .selfie ul , #background , table caption{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+    font-weight: bolder;
+    color:black;
+    list-style: none;
+}
+
+.preview img {
+    margin: 0 auto;
+    padding: 5px 10px;
+    border-style: dotted ;
+    color:rgb(237, 191, 73) ;
+}
+
+#box{
+    border: 1px solid black; 
+    font-family: Arial, sans-serif; 
+    font-size: 16px; 
+    line-height: 1.5; 
+    text-align: center; 
+    margin: 5% 25% 2%;
+
+}
+
+table caption {
+    font-size: 14px;
+    margin-top: 1%;
+    caption-side: bottom;
+}
+/*------------------------------------------------ 5 Menu ------------------------------------------------*/
+
+.food-card img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border: 1px solid white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.food-card {
+    background: white;
+    border-radius: 10px;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.food-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.food-card p {
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.menu {
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+.food-price {
+    display: block;
+    text-align: center;
+    padding: 0.5rem;
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.course-section, .beverage-section, .dessert-section{
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.stars{
+    color: #f1c40f;
+    font-size: 1.2rem;
+}
+
+/*------------------------------------------------ 6 Description ------------------------------------------------*/
+
+.food-card2 img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.food-card2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.food-card2 {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.reviews {
+    flex: 1;
+}
+
+.course-section2, .beverage-section2, .dessert-section2 {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+.foodpic {
+    margin: 0;
+    flex-basis: 400px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .food-card2 {
+        flex-direction: column;
+    }
+}
+/*------------------------------------------------ 7 About Us ------------------------------------------------*/
+
+.selfie,
+.selfiebox th {
+    margin: auto;
+    width: 33%;
+    border: 3px solid #b33101;
+    padding: 2rem 1.5rem ;
+}
+
+.selfiebox{
+    width:100%;
+    table-layout: fixed;
+}
+
+.selfie img {
+    max-width: 50%;
+    border-radius: 50%;
+    border: 3px solid white;
+    text-align: left;
+}
+
+.selfiebox td,
+.selfiebox th {
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.selfie ul,
+.selfie ol {
+    text-align: left;
+    line-height: 1.5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+    font-weight: bolder;
+    color:black;
+    
+}
+
+/*------------------------------------------------ 8 Orderlist & Feedback  ------------------------------------------------*/
+
+/*This info is taken from :https://www.w3schools.com/css/css3_buttons.asp*/
+.button_design{
+    background-color: #ff8787;
+    border-color: white;
+    border-style: double ;
+    border-width: 3px;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    display: inline-block;
+    text-decoration: none;
+    
+}
+
+.slidecontainer{
+    width: 100%; 
+}
+
+/*This info is taken from:https://www.w3schools.com/howto/howto_js_rangeslider.asp*/
+.slider{
+    -webkit-appearance: none;  
+    appearance: none;
+    width: 100%; 
+    height: 25px; 
+    background: white; 
+    outline: none; 
+}
+
+/* Generated by ChatGPT */
+/* Style for range thumb */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px; 
+    height: 15px;
+    background-color: #ff8787; 
+    cursor: pointer;
+    border-radius: 50%; 
+}
+
+/* Generated by ChatGPT*/
+/* Style for radio buttons */
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px; 
+    height: 15px;
+    background-color: white; 
+    border-radius: 50%; 
+    cursor: pointer;
+    outline: none;
+    position: relative;
+}
+
+/* When radio button clicked it will change to pink*/
+input[type="radio"]:checked {
+    background-color: #ff8787; 
+}
+
+/* Generated by ChatGPT*/
+/* Style for checkbox button */
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px; 
+    height: 15px;
+    background-color: white; 
+    border-radius: 50%; 
+    cursor: pointer;
+    outline: none;
+    position: relative;
+}
+
+/* When checkbox button clicked it will change to pink*/
+input[type="checkbox"]:checked {
+    background-color: #ff8787; 
+}
+
+.answer{
+    display: flex;
+}
+
+h1 + p {
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px ;
+}
+
+legend{
+    text-align: center;
+    font-weight: bold;
+}
+
+#msg1,#msg2,#msg3,#msg4,#msg5,#msg6{
+    color: #e54242;
+    font-size: 14.5px;
+}
+
+.ftable th,
+.ftable td
+{
+    padding: 4px;
+}
+
+#feedbacktype{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center,.buttons{
+    text-align: center;
+}
+
+input, textarea, select{
+    outline: none;
+}
+
+input:focus, textarea:focus, select:focus{
+    border: 2px solid #e94500;
+}
+
+/*--- Feedback ( Rating) ---*/
+#rating table, #rating td, #rating th{
+    border: 1px solid black;
+    text-align: center;
+    border-collapse: collapse;
+    padding-top: 0.5em; 
+    padding-bottom: 0.5em;
+    padding-left: 0.5em; 
+    padding-right: 0.5em;    
+    margin-bottom: 2%;
+
+}
+
+#rating {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    margin-top: 20px;
+}
+
+/*------------------------------------------------ 9 Media ------------------------------------------------*/
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .food-card2 {
+        flex-direction: column;
+    }
+}
